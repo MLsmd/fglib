@@ -160,7 +160,7 @@ class VNode(Node):
         # In case of multiple occurrences of the maximum values,
         # the indices corresponding to the first occurrence are returned.
         b = self.belief()
-        return b.argmax(self)
+        return b.argmax()
 
     def spa(self, tnode):
         """Return message of the sum-product algorithm."""
