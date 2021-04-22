@@ -337,7 +337,7 @@ class IOFNode(FNode):
 
     def __init__(self, label, factor, callback=None):
         """Create an input-output factor node."""
-        super().__init__(self, label, factor)
+        super().__init__(label, factor)
         if callback is not None:
             self.set_callback(callback)
 
