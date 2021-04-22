@@ -287,6 +287,10 @@ class Discrete(RandomVariable):
         self._pmf = np.tile(self.pmf, reps)
         self._dim = dims
 
+    def get_pmf(self):
+        """Getter function for numpy array with pmf."""
+        return self._pmf
+
     def normalize(self):
         """Normalize probability mass function."""
         pmf = self.pmf / np.abs(np.sum(self.pmf))
