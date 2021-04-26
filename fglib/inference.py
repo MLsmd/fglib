@@ -197,7 +197,7 @@ def _schedule(model, method, iterations, query_node, order):
         # Visit nodes in predefined order
         for n in order:
             for neighbor in nx.all_neighbors(model, n):
-                msg = getattr(n, method)(model, neighbor)
+                msg = getattr(n, method)(neighbor)
                 model[n][neighbor]['object'].set_message(n, neighbor, msg)
 
         # Beliefs of query nodes
